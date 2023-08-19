@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GangRescue", "GangRescue.vcxproj", "{E202AA49-2F15-4A1D-BC20-651E2AA12B7C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rdr2sdk", "..\rdr2sdk\rdr2sdk.vcxproj", "{C517EADD-37BF-4537-9910-F39B0A27BFA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -10,13 +12,17 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E202AA49-2F15-4A1D-BC20-651E2AA12B7C}.Debug|Win32.ActiveCfg = Debug|Win32
-		{E202AA49-2F15-4A1D-BC20-651E2AA12B7C}.Debug|Win32.Build.0 = Debug|Win32
-		{E202AA49-2F15-4A1D-BC20-651E2AA12B7C}.Release|Win32.ActiveCfg = Release|Win32
-		{E202AA49-2F15-4A1D-BC20-651E2AA12B7C}.Release|Win32.Build.0 = Release|Win32
 		{E202AA49-2F15-4A1D-BC20-651E2AA12B7C}.Release|x64.ActiveCfg = Release|x64
 		{E202AA49-2F15-4A1D-BC20-651E2AA12B7C}.Release|x64.Build.0 = Release|x64
 		{E202AA49-2F15-4A1D-BC20-651E2AA12B7C}.Debug|x64.ActiveCfg = Release|x64
 		{E202AA49-2F15-4A1D-BC20-651E2AA12B7C}.Debug|x64.Build.0 = Release|x64
+		{C517EADD-37BF-4537-9910-F39B0A27BFA4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C517EADD-37BF-4537-9910-F39B0A27BFA4}.Debug|Win32.Build.0 = Debug|Win32
+		{C517EADD-37BF-4537-9910-F39B0A27BFA4}.Debug|x64.ActiveCfg = Debug|x64
+		{C517EADD-37BF-4537-9910-F39B0A27BFA4}.Debug|x64.Build.0 = Debug|x64
+		{C517EADD-37BF-4537-9910-F39B0A27BFA4}.Release|Win32.ActiveCfg = Release|Win32
+		{C517EADD-37BF-4537-9910-F39B0A27BFA4}.Release|Win32.Build.0 = Release|Win32
+		{C517EADD-37BF-4537-9910-F39B0A27BFA4}.Release|x64.ActiveCfg = Release|x64
+		{C517EADD-37BF-4537-9910-F39B0A27BFA4}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
