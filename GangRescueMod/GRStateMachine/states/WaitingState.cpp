@@ -5,6 +5,7 @@
 #include "StartingState.h"
 #include "../../../public/Math/Math.h"
 #include "../../../public/Map/MapArea.h"
+#include "../../../public/World/Gang.h"
 
 void WaitingState::enter(GRStateManager& machine)
 {
@@ -27,6 +28,14 @@ void WaitingState::update(GRStateManager& machine)
     const game::RdrPed* player_hostage = get_carried_hostage(machine);
     if (player_hostage == nullptr) return;
 
+    if (!gang::Gang::is_gang(machine.get_gang()))
+    {
+        return;
+    }
+    std::stringstream info_log;
+    info_log << "Hostage not null, gang hash is " << machine.get_gang() << " " << (gang::Gang::is_gang(machine.get_gang()) ? "that is a gang" : " that is NOT a gang");
+    machine.logger()->info(info_log.str().c_str());
+    
     if (!entered_area_ && !is_in_active_area_)
     {
         return;
@@ -54,12 +63,7 @@ game::RdrPed* WaitingState::ped_get_carried_hostage_if_valid(game::RdrPed* ped)
     {
         if (const game::RdrEntity* carried_entity = ped->get_carried_entity().get(); carried_entity->is_ped() && !carried_entity->is_dead())
         {
-            game::RdrPed* temporary_ped = new game::RdrPed(*carried_entity);
-            if (const Hash gang = temporary_ped->get_ped_outlaws_gang() > 0)
-            {
-                this->temporary_gang = gang;
-                return temporary_ped;
-            }
+            return new game::RdrPed(*carried_entity);
         }
     }
     return nullptr;
@@ -72,9 +76,21 @@ game::RdrPed* WaitingState::get_carried_hostage(GRStateManager& machine)
     {
         hostage = ped_get_carried_hostage_if_valid(machine.get_player()->horse.get());;
     }
-    machine.set_hostage(hostage);
-    machine.set_gang(hostage != nullptr ? hostage->get_relationship() : 0);
-    return hostage; 
+
+    if (hostage != nullptr)
+    {
+        // Something is broken here...
+        if (const Hash gang_hash = hostage->get_ped_outlaws_gang(); gang_hash > 0)
+        {
+            machine.set_gang(gang_hash);
+            machine.set_hostage(hostage);
+            return hostage;
+        }
+    }
+    // I don't particularly like this
+    machine.set_gang(-1);
+    machine.set_hostage(nullptr);
+    return nullptr; 
 }
 
 bool WaitingState::is_event_ready() const
