@@ -12,7 +12,7 @@ private:
     bool is_in_active_area_ = false;
 
     game::RdrPed* ped_get_carried_hostage_if_valid(game::RdrPed* ped);
-    game::RdrPed* get_carried_hostage(GRStateManager& machine);
+    game::RdrPed* update_fsm_with_hostage_data(GRStateManager& machine);
     bool is_event_ready() const;
     void update_last_time_calculated_chance();
     [[nodiscard]] double generate_chance();

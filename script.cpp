@@ -241,7 +241,7 @@ void create_test_ped()
             rdr2_logger->info(player_position.str().c_str());
 
             temp_ped = std::unique_ptr<game::RdrPed>(
-                game::RdrPed::create_ped("A_M_M_RhdTownfolk_01", pedPos, player->character->get_heading() * -1, false,
+                game::RdrPed::create_ped("g_m_y_uniexconfeds_01", pedPos, player->character->get_heading() * -1, false,
                                          game::EBlipStyles::BLIP_STYLE_ENEMY));
 
             std::string horse_model = game::RdrHorse::get_random_horse_model();

@@ -25,16 +25,18 @@ void WaitingState::update(GRStateManager& machine)
     if (!set_map_area_from_player_position(machine)) return;
     entered_area_ = player_entered_trigger_area(machine);
 
-    const game::RdrPed* player_hostage = get_carried_hostage(machine);
+    // Separate logic -> hostage and gang should be processed separately
+    // however, if a hostage does not belong to a gang, should return nullptr
+    const game::RdrPed* player_hostage = update_fsm_with_hostage_data(machine);
     if (player_hostage == nullptr) return;
 
     if (!gang::Gang::is_gang(machine.get_gang()))
     {
+        std::stringstream info_log;
+        info_log << "Hostage not null, but gang hash is " << machine.get_gang() << " that is NOT a gang";
+        machine.logger()->info(info_log.str().c_str());
         return;
     }
-    std::stringstream info_log;
-    info_log << "Hostage not null, gang hash is " << machine.get_gang() << " " << (gang::Gang::is_gang(machine.get_gang()) ? "that is a gang" : " that is NOT a gang");
-    machine.logger()->info(info_log.str().c_str());
     
     if (!entered_area_ && !is_in_active_area_)
     {
@@ -69,8 +71,11 @@ game::RdrPed* WaitingState::ped_get_carried_hostage_if_valid(game::RdrPed* ped)
     return nullptr;
 }
 
-game::RdrPed* WaitingState::get_carried_hostage(GRStateManager& machine)
+game::RdrPed* WaitingState::update_fsm_with_hostage_data(GRStateManager& machine)
 {
+    machine.set_gang(-1);
+    machine.set_hostage(nullptr);
+    
     game::RdrPed* hostage = ped_get_carried_hostage_if_valid(machine.get_player()->character.get());
     if (hostage == nullptr && machine.get_player()->horse)
     {
@@ -79,18 +84,15 @@ game::RdrPed* WaitingState::get_carried_hostage(GRStateManager& machine)
 
     if (hostage != nullptr)
     {
-        // Something is broken here...
-        if (const Hash gang_hash = hostage->get_ped_outlaws_gang(); gang_hash > 0)
+        const Hash gang_hash = hostage->get_ped_outlaws_gang();
+        if (gang_hash > 0)
         {
             machine.set_gang(gang_hash);
             machine.set_hostage(hostage);
             return hostage;
         }
     }
-    // I don't particularly like this
-    machine.set_gang(-1);
-    machine.set_hostage(nullptr);
-    return nullptr; 
+    return nullptr;
 }
 
 bool WaitingState::is_event_ready() const
