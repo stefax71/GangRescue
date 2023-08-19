@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GangRescueMod\GRStateMachine\GRStateManager.cpp" />
+    <ClCompile Include="GangRescueMod\GRStateMachine\states\CompletedState.cpp" />
+    <ClCompile Include="GangRescueMod\GRStateMachine\states\EnemiesManager.cpp" />
+    <ClCompile Include="GangRescueMod\GRStateMachine\states\GangRescueState.cpp">
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AssemblerListingLocation>tmp\Release\</AssemblerListingLocation>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <BrowseInformationFile>tmp\Release\</BrowseInformationFile>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CompileAs>Default</CompileAs>
+      <ConformanceMode>Default</ConformanceMode>
+      <DiagnosticsFormat>Column</DiagnosticsFormat>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <ErrorReporting>Prompt</ErrorReporting>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableASAN>false</EnableASAN>
+      <EnableFuzzer>false</EnableFuzzer>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <GenerateModuleDependencies>false</GenerateModuleDependencies>
+      <GenerateSourceDependencies>false</GenerateSourceDependencies>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ModuleDependenciesFile>tmp\Release\</ModuleDependenciesFile>
+      <ModuleOutputFile>tmp\Release\</ModuleOutputFile>
+      <OmitDefaultLibName>false</OmitDefaultLibName>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <Optimization>MaxSpeed</Optimization>
+      <ObjectFileName>tmp\Release\</ObjectFileName>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ProgramDataBaseFileName>tmp\Release\vc143.pdb</ProgramDataBaseFileName>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>tmp\Release\GangRescue.pch</PrecompiledHeaderOutputFile>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessKeepComments>false</PreprocessKeepComments>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <RemoveUnreferencedCodeData>true</RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+      <ShowIncludes>false</ShowIncludes>
+      <SourceDependenciesFile>tmp\Release\</SourceDependenciesFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <SpectreMitigation>false</SpectreMitigation>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <TrackerLogDirectory>tmp\Release\GangRescue.tlog\</TrackerLogDirectory>
+      <TranslateIncludes>false</TranslateIncludes>
+      <MinimalRebuildFromTracking>true</MinimalRebuildFromTracking>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>true</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <XMLDocumentationFileName>tmp\Release\</XMLDocumentationFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <IntelJCCErratum>false</IntelJCCErratum>
+      <TreatAngleIncludeAsExternal>false</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>InheritWarningLevel</ExternalWarningLevel>
+      <TreatExternalTemplatesAsInternal>true</TreatExternalTemplatesAsInternal>
+      <DisableAnalyzeExternal>false</DisableAnalyzeExternal>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;Pools_EXPORTS;_WINDLL;_MBCS;</PreprocessorDefinitions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalIncludeDirectories>D:\RDR2 Modding\Development\CPP-Mods\ScriptHook\rdr2sdk\Game\</AdditionalIncludeDirectories>
+      <LinkCompiled>true</LinkCompiled>
+    </ClCompile>
+    <ClCompile Include="GangRescueMod\GRStateMachine\states\InitializingState.cpp" />
+    <ClCompile Include="GangRescueMod\GRStateMachine\states\PendingCompleteState.cpp" />
+    <ClCompile Include="GangRescueMod\GRStateMachine\states\RunningState.cpp" />
+    <ClCompile Include="GangRescueMod\GRStateMachine\states\StartingState.cpp" />
+    <ClCompile Include="GangRescueMod\GRStateMachine\states\WaitingState.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="script.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GangRescueMod\GRStateMachine\GRStateManager.h" />
+    <ClInclude Include="GangRescueMod\GRStateMachine\states\CompletedState.h" />
+    <ClInclude Include="GangRescueMod\GRStateMachine\states\EnemiesManager.h" />
+    <ClInclude Include="GangRescueMod\GRStateMachine\states\GangRescueState.h" />
+    <ClInclude Include="GangRescueMod\GRStateMachine\states\InitializingState.h" />
+    <ClInclude Include="GangRescueMod\GRStateMachine\states\PendingCompleteState.h" />
+    <ClInclude Include="GangRescueMod\GRStateMachine\states\RunningState.h" />
+    <ClInclude Include="GangRescueMod\GRStateMachine\states\StartingState.h" />
+    <ClInclude Include="GangRescueMod\GRStateMachine\states\WaitingState.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="public\Debug\RdrConsole.h" />
+    <ClInclude Include="public\Input\keyboard.h" />
+    <ClInclude Include="public\Logger\RdrLogger.h" />
+    <ClInclude Include="public\Map\MapArea.h" />
+    <ClInclude Include="public\Map\MapAreasManager.h" />
+    <ClInclude Include="public\Math\Math.h" />
+    <ClInclude Include="public\native\enums.h" />
+    <ClInclude Include="public\native\main.h" />
+    <ClInclude Include="public\native\nativeCaller.h" />
+    <ClInclude Include="public\native\natives.h" />
+    <ClInclude Include="public\native\types.h" />
+    <ClInclude Include="public\Objects\RDREntity.h" />
+    <ClInclude Include="public\Objects\RdrHorse.h" />
+    <ClInclude Include="public\Objects\RDRPed.h" />
+    <ClInclude Include="public\Objects\RDRPlayer.h" />
+    <ClInclude Include="public\Pool\ObjectPool.h" />
+    <ClInclude Include="public\rdr2.h" />
+    <ClInclude Include="public\RDREnums.h" />
+    <ClInclude Include="public\UI\UIPrompt.h" />
+    <ClInclude Include="public\UI\UISubTitle.h" />
+    <ClInclude Include="public\Utility\Utils.h" />
+    <ClInclude Include="public\World\Gang.h" />
+    <ClInclude Include="public\World\world.h" />
+    <ClInclude Include="script.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="public\UI\UIPrompt.zip" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8D82F34A-1D64-465B-84B1-37F89AD3D20B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GangRescue</RootNamespace>
+    <ProjectName>GangRescue</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.asi</TargetExt>
+    <OutDir>bin\$(Configuration)\</OutDir>
+    <IntDir>tmp\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;Pools_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>.\lib\ScriptHookRDR2.lib .\lib\rdr2sdk.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>./lib/</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <Target Name="AfterBuild">
+    <Exec Command="xcopy /y /d &quot;$(TargetPath)&quot; &quot;D:\SteamLibrary\steamapps\common\Red Dead Redemption 2\&quot;" />
+  </Target>
+
+</Project>
