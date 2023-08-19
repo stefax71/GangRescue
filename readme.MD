@@ -1,3 +1,6 @@
 ### Gang Rescue Mod
 This mod adds a functionality to [Bounty Hunting - Expanded and Enhanced](https://www.nexusmods.com/reddeadredemption2/mods/1073?tab=files) by Shtivi.
-The provided library, rdr2sdk.lib, has its own source code which I will add soon as a repo.
+To compile this mod you need my framework that, out of imagination and creativity, I called rdr2sdk. You can find it [here](https://github.com/stefax71/rdr2sdk) or, as an alternative, you can use the provided binary in the lib folder.
+
+The code is provided "as-is". You are welcome to push pull requests if you enhance it!
+
