@@ -1,10 +1,11 @@
 ﻿#include "StartingState.h"
 
 #include "RunningState.h"
-#include "../../../public/Math/Math.h"
-#include "../../../public/Objects/RdrHorse.h"
-#include "../../../public/World/Gang.h"
-#include "../../../public/World/world.h"
+#include "public/Math/MathUtils.h"
+#include "public/Objects/RdrHorse.h"
+#include "public/World/Gang.h"
+#include "public/World/world.h"
+#include "public/UI/UISubTitle.h"
 
 void StartingState::update(GRStateManager& machine)
 {

@@ -3,9 +3,9 @@
 #include <random>
 
 #include "StartingState.h"
-#include "../../../public/Math/Math.h"
-#include "../../../public/Map/MapArea.h"
-#include "../../../public/World/Gang.h"
+#include "public/Math/MathUtils.h"
+#include "public/Map/MapArea.h"
+#include "public/World/Gang.h"
 
 void WaitingState::enter(GRStateManager& machine)
 {

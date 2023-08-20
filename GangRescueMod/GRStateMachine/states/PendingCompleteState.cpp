@@ -1,7 +1,7 @@
 ﻿#include "PendingCompleteState.h"
 
-#include "../../../public/Map/MapArea.h"
-#include "../../../public/Math/Math.h"
+#include "public/Map/MapArea.h"
+#include "public/Math/MathUtils.h"
 
 void PendingCompleteState::enter(GRStateManager& machine)
 {

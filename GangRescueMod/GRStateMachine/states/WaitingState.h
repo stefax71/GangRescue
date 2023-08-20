@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "GangRescueState.h"
 #include "../GRStateManager.h"
-#include "../../../public/Objects/RDRPed.h"
+#include "public/Objects/RDRPed.h"
 
 class WaitingState: public GangRescueState
 {

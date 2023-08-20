@@ -6,7 +6,7 @@
 
 #include "main.h"
 
-#include "public/rdr2.h"
+#include "public/rdr2sdk.h"
 
 BOOL APIENTRY DllMain(HMODULE hInstance, DWORD reason, LPVOID lpReserved)
 {

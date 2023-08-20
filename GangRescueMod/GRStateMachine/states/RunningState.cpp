@@ -1,11 +1,10 @@
 ﻿#include "RunningState.h"
 
 #include "CompletedState.h"
-#include "../../../public/Map/MapArea.h"
-#include "../../../public/Math/Math.h"
-
-#include "../../../public/World/Gang.h"
-
+#include "public/Map/MapArea.h"
+#include "public/Math/MathUtils.h"
+#include "public/World/Gang.h"
+#include "public/UI/UISubTitle.h"
 
 void RunningState::enter(GRStateManager& machine)
 {

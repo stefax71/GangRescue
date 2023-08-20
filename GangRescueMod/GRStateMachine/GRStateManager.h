@@ -2,8 +2,8 @@
 #include <vector>
 
 
-#include "../../public/Objects/RDRPed.h"
-#include "../../public/Objects/RDRPlayer.h"
+#include "public/Objects/RDRPed.h"
+#include "public/Objects/RDRPlayer.h"
 
 class MapAreasManager;
 class GangRescueState;

@@ -9,7 +9,7 @@
 #include <sstream>
 #include <windows.h>
 
-#include "public/rdr2.h"
+#include "public/rdr2sdk.h"
 // #include "GangRescueMod/GangRescueManager.h"
 #include "GangRescueMod/GRStateMachine/GRStateManager.h"
 #include "public/Objects/RdrHorse.h"
